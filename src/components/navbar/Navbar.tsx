@@ -7,16 +7,16 @@ const Navbar = () => {
   return (
     <div className="md:sticky md:top-0   md:shadow-none z-20 ">
       <div className="  animate-in fade-in zoom-in bg-white p-8">
-        <div className="flex justify-between md:mx-[24rem] items-center">
+        <div className="flex justify-between md:mx-[24rem] items-center text-foreground/70">
           <Logo />
           <div className="hidden  lg:flex gap-10 ">
             <Links />
           </div>
           <div>
             <Button size="icon" className=" mr-4 ">
-              <Phone className="h-4 w-4" />
+              <Phone className="h-5 w-5" />
             </Button>
-            (+213)7 90 91 94 93
+            (+213) 7 90 91 94 93
           </div>
 
           <Button className="hover:-translate-y-1 transition-all duration-300">
