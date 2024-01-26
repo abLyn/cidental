@@ -9,13 +9,13 @@ const Links = () => {
   ]
 
   return (
-    <div>
+    <>
       {links.map((link) => (
         <Link key={link.title} href={link.path}>
           {link.title}
         </Link>
       ))}
-    </div>
+    </>
   )
 }
 
