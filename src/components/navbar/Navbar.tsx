@@ -4,7 +4,7 @@ import Logo from './Logo'
 import { Button } from '../ui/button'
 import { AlignRight, X } from 'lucide-react'
 import { useState } from 'react'
-import LinksMobile from './links/LinksMobile'
+
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
         </div>
         {menu ? (
-          <div className="my-8 select-none animate-in slide-in-from-top">
+          <div className="my-8 select-none animate-in slide-in-from-top  ">
             <div className="flex flex-col gap-8 mt-8 mx-4 items-center">
               {links.map((link) => {
                 const isActive =
@@ -94,6 +94,9 @@ const Navbar = () => {
                   </Link>
                 )
               })}
+              <Button className="hover:-translate-y-1 transition-all duration-300">
+                Sign in
+              </Button>
             </div>
           </div>
         ) : (
