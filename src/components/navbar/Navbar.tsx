@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="flex md:sticky px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-foreground ">
+      <div className="flex md:sticky px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
         <Logo />
         <div className="hidden  lg:flex gap-10 ">
           {links.map((link) => {
@@ -62,11 +62,17 @@ const Navbar = () => {
           <div className="flex items-center gap-[40px]">
             {menu ? (
               <X
+                size={40}
+                strokeWidth={3}
+                absoluteStrokeWidth
                 className="cursor-pointer animate-in fade-in zoom-in text-primary"
                 onClick={toggleMenu}
               />
             ) : (
               <AlignRight
+                size={40}
+                strokeWidth={3}
+                absoluteStrokeWidth
                 className="cursor-pointer animate-in fade-in zoom-in text-primary"
                 onClick={toggleMenu}
               />
