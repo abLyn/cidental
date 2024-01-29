@@ -1,9 +1,10 @@
 import { Button } from '../ui/button'
-
+import Image from 'next/image'
 const HeroSection = () => {
   return (
     <section className="flex justify-between flex-col md:flex-row gap-4 items-center">
       <div>
+        <div></div>
         <p className="font-[850] md:leading-[5.0625rem] text-2xl md:text-[4.375rem] text-darkBlue">
           Excellent Techniques For Healthy Dental Condition
         </p>

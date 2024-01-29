@@ -1,11 +1,12 @@
 'use client'
 
-import Logo from './Logo'
 import { Button } from '../ui/button'
+import Logo from './Logo'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import MobileNav from './MobileNav'
+import ThemeSwitcherBtn from './ThemeSwitcherBtn'
 
 const links = [
   { label: 'Accueil', route: '/' },
@@ -20,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="flex md:sticky px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
+      <div className="flex md:sticky top-0 bg-white px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
         <Logo />
 
         <div className="hidden  lg:flex gap-10 ">
@@ -41,12 +42,12 @@ const Navbar = () => {
               </Link>
             )
           })}
-          S
         </div>
 
         <Button className="hover:-translate-y-1 transition-all duration-300">
           Sign in
         </Button>
+        <ThemeSwitcherBtn />
       </div>
 
       {/*Mobile Navbar */}

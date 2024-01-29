@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Lato } from 'next/font/google'
 import './globals.css'
-
+import ThemeProvider from '@/providers/ThemeProvider'
 import Footer from '@/components/footer/Footer'
 import Navbar from '@/components/navbar/Navbar'
 
@@ -24,10 +24,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <Navbar />
-        <section className="flex min-h-screen flex-1 flex-col items-center  px-6 pb-10 pt-10 max-md:pb-32 sm:px-10">
-          <div className="w-full max-w-7xl">{children}</div>
-        </section>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <section className="flex min-h-screen flex-1 flex-col items-center  px-6 pb-10 pt-10 max-md:pb-32 sm:px-10">
+            <div className="w-full max-w-7xl">{children}</div>
+          </section>
+        </ThemeProvider>
       </body>
     </html>
   )
