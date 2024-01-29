@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import MobileNav from './MobileNav'
 import ThemeSwitcherBtn from './ThemeSwitcherBtn'
+import PhoneSection from './PhoneSection'
 
 const links = [
   { label: 'Accueil', route: '/' },
@@ -21,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="flex md:sticky top-0 bg-white px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
+      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-secondary/80  px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
         <Logo />
 
         <div className="hidden  lg:flex gap-10 ">
@@ -44,21 +45,27 @@ const Navbar = () => {
           })}
         </div>
 
-        <Button className="hover:-translate-y-1 transition-all duration-300">
-          Sign in
-        </Button>
-        <ThemeSwitcherBtn />
+        <PhoneSection />
+        <div>
+          <ThemeSwitcherBtn />
+          <Button
+            variant="outline"
+            className="hover:-translate-y-1 transition-all duration-300"
+          >
+            Sign in
+          </Button>
+        </div>
       </div>
 
       {/*Mobile Navbar */}
       <div
-        className={` block   lg:hidden shadow-sm justify-between fixed top-0 w-full z-20 bg-white py-4  animate-in fade-in zoom-in
+        className={` block   lg:hidden shadow-sm justify-between fixed top-0 w-full z-20 backdrop-blur-md   bg-muted/95 py-4  animate-in fade-in zoom-in
 
         `}
       >
         <div className="flex justify-between px-5 md:px-10">
           <Logo />
-          <div className="flex items-center gap-[40px]">
+          <div className="flex  gap-[10px]">
             <MobileNav />
           </div>
         </div>

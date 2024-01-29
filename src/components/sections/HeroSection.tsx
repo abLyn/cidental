@@ -21,6 +21,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
       <div>
         <img
           src="/images/happy_guy.png"
