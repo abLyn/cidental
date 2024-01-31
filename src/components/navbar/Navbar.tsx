@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-secondary/80  px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground text-xl  ">
+      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-background/80  px-3 md:px-5 lg:px-40 py-2 items-center justify-between z-20 text-muted-foreground font-semibold  ">
         <Logo />
 
         <div className="hidden  lg:flex gap-10 ">
@@ -46,20 +46,23 @@ const Navbar = () => {
         </div>
 
         <PhoneSection />
-        <div>
+        <div className="flex gap-4">
           <ThemeSwitcherBtn />
+          <Link href={'#'} className=" text-primary ">
+            Sign in
+          </Link>
           <Button
             variant="outline"
-            className="hover:-translate-y-1 transition-all duration-300"
+            className="hover:-translate-y-1 transition-all duration-300 border-primary text-primary"
           >
-            Sign in
+            Create an account
           </Button>
         </div>
       </div>
 
       {/*Mobile Navbar */}
       <div
-        className={` block   lg:hidden shadow-sm justify-between fixed top-0 w-full z-20 backdrop-blur-md   bg-muted/95 py-4  animate-in fade-in zoom-in
+        className={` block   lg:hidden shadow-sm justify-between bg-background/80 fixed top-0 w-full z-20 backdrop-blur-md    pt-3  animate-in fade-in zoom-in
 
         `}
       >
