@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-background/80  px-3 md:px-5 lg:px-40 py-2 items-center justify-between z-20 text-muted-foreground font-semibold  ">
+      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-background/80  px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground font-semibold  ">
         <Logo />
 
         <div className="hidden  lg:flex gap-10 ">
