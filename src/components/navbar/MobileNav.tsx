@@ -30,7 +30,7 @@ const MobileNav = () => {
           size={40}
           strokeWidth={3}
           absoluteStrokeWidth
-          className="cursor-pointer animate-in fade-in zoom-in text-primary"
+          className="cursor-pointer animate-in fade-in zoom-in text-primary "
         />
       </SheetTrigger>
       <SheetContent side={'left'}>

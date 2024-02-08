@@ -38,7 +38,10 @@ const Footer = () => {
             <h6 className="font-bold uppercase pt-2">{section.title}</h6>
             <ul>
               {section.items.map((item, i) => (
-                <li key={i} className="py-1 text-gray-500 hover:text-primary">
+                <li
+                  key={i}
+                  className="py-1 text-gray-500 hover:text-primary hover:cursor-pointer"
+                >
                   {item}
                 </li>
               ))}
@@ -66,7 +69,12 @@ const Footer = () => {
         <p className="py-4">2024 CI Dental Group. All rights reserved</p>
         <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
           {items.map((x, index) => {
-            return <x.icon key={index} className="hover:text-white" />
+            return (
+              <x.icon
+                key={index}
+                className="hover:text-primary hover:cursor-pointer"
+              />
+            )
           })}
         </div>
       </div>

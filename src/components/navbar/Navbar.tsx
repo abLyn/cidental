@@ -61,7 +61,7 @@ const Navbar = () => {
 
       {/*Mobile Navbar */}
       <div
-        className={` block   lg:hidden shadow-sm justify-between bg-background/80 fixed top-0 w-full z-20 backdrop-blur-md    pt-3  animate-in fade-in zoom-in
+        className={` block   lg:hidden shadow-sm justify-between bg-background/80 fixed top-0 w-full z-40 backdrop-blur-md    pt-3  animate-in fade-in zoom-in
 
         `}
       >
