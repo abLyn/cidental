@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react'
 const PhoneSection = () => {
   return (
     <>
-      <div className="flex gap-4">
+      <div className="hidden lg:flex gap-4">
         <div className="relative flex h-7 w-7">
           <div className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-90"></div>
           <span className="relative inline-flex rounded-full h-max w-max  bg-primary text-secondary p-1 ">

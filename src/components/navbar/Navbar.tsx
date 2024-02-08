@@ -1,13 +1,14 @@
 'use client'
 
-import { Button } from '../ui/button'
 import Logo from './Logo'
 
+import { LogIn } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import MobileNav from './MobileNav'
-import ThemeSwitcherBtn from './ThemeSwitcherBtn'
 import PhoneSection from './PhoneSection'
+import ThemeSwitcherBtn from './ThemeSwitcherBtn'
+import { Button } from '../ui/button'
 
 const links = [
   { label: 'Accueil', route: '/' },
@@ -22,10 +23,10 @@ const Navbar = () => {
   return (
     <>
       {/*Desktop Navbar */}
-      <div className="md:flex hidden md:sticky top-0 backdrop-blur-xl bg-background/80  px-3 md:px-5 lg:px-40 py-4 items-center justify-between z-20 text-muted-foreground font-semibold  ">
+      <div className=" hidden md:flex md:sticky top-0 backdrop-blur-xl bg-background/80 items-center justify-between z-20 text-muted-foreground font-semibold  lg:text-sm xl:text-lg px-3 md:px-5 lg:px-10 2xl:px-80 lg:py-4">
         <Logo />
 
-        <div className="hidden  lg:flex gap-10 ">
+        <div className="hidden  lg:flex gap-4 2xl:gap-8 justify-end items-center">
           {links.map((link) => {
             const isActive =
               (pathname.includes(link.route) && link.route.length > 1) ||
@@ -46,15 +47,13 @@ const Navbar = () => {
         </div>
 
         <PhoneSection />
-        <div className="flex gap-4">
+
+        <div className="hidden lg:flex items-center gap-6 ">
           <ThemeSwitcherBtn />
-          <Link href={'#'} className=" text-primary ">
-            Sign in
+          <Link href={'#'} className=" hover:text-primary flex gap-1">
+            Sign in <LogIn />
           </Link>
-          <Button
-            variant="outline"
-            className="hover:-translate-y-1 transition-all duration-300 border-primary text-primary"
-          >
+          <Button className="hover:-translate-y-1 transition-all duration-300 border-primary ">
             Create an account
           </Button>
         </div>

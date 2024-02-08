@@ -1,4 +1,3 @@
-import React from 'react'
 import { Facebook, Github, Instagram, Twitter, Twitch } from 'lucide-react'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -39,7 +38,7 @@ const Footer = () => {
             <h6 className="font-bold uppercase pt-2">{section.title}</h6>
             <ul>
               {section.items.map((item, i) => (
-                <li key={i} className="py-1 text-gray-500 hover:text-white">
+                <li key={i} className="py-1 text-gray-500 hover:text-primary">
                   {item}
                 </li>
               ))}
@@ -64,7 +63,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
-        <p className="py-4">2022 Workflow, LLC. All rights reserved</p>
+        <p className="py-4">2024 CI Dental Group. All rights reserved</p>
         <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
           {items.map((x, index) => {
             return <x.icon key={index} className="hover:text-white" />
